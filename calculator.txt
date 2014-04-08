@@ -1,0 +1,35 @@
+Calculator
+==========
+
+This "project" is meant to be a well-defined sample application that is put together in distinct steps so that
+the programmer can focus on either certain methods/techniques of software development or to learn new technologies.  It is intended for these exercises to be administered by a senior programmer who understand the topics fully and can guide the programmer.
+
+The project will create a calculator program that will work through the following topics:
+
+  * Basic Program Creation with TDD, Mocks, and Dependency Injection
+  * Argument Parsing and File Handling
+  * Refactoring with TDD, Mocks, and Dependency Injection
+  * Database Interaction
+
+The following sections define the application as it should exist at the completion of the exercise.
+
+Basic Program Done with TDD, Mocks, and DI
+-------------------------------------------
+In this step, the programmer creates a command-line program to perform simple math calculations.  The point of this step is to establish a basic program that will become the framework to build on for the remainder of the exercises.  A command-line program is selected as a way to simplify the requirements so that the programmer can focus on creating interfaces, doing TDD, etc.
+
+The Command-line application should prompt a user for a problem, like:
+  C:\> calc.exe
+  Please enter a problem: 
+
+The user can enter a string arguments in the form of:
+  operand1 operator operand2
+
+The program will then return the result and prompt for the next problem, like:
+  The result is:  X
+  Please enter a problem: 
+
+To exit the program, the user can type x or X.
+
+The calculator should support addition, subtraction, multiplication, and division.  It can only accept numbers as operands, but the numbers can be either integers or fractional numbers.
+
+It may be necessary for the senior programmer administering this exercise to adjust the requirements to keep the programmer focused.

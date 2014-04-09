@@ -13,23 +13,59 @@ The project will create a calculator program that will work through the followin
 
 The following sections define the application as it should exist at the completion of the exercise.
 
-Basic Program Done with TDD, Mocks, and DI
--------------------------------------------
+Step 1:  Create a Basic Program with TDD, Mocks, and DI
+-------------------------------------------------------
 In this step, the programmer creates a command-line program to perform simple math calculations.  The point of this step is to establish a basic program that will become the framework to build on for the remainder of the exercises.  A command-line program is selected as a way to simplify the requirements so that the programmer can focus on creating interfaces, doing TDD, etc.
 
 The Command-line application should prompt a user for a problem, like:
   C:\> calc.exe
-  Please enter a problem: 
-
-The user can enter a string arguments in the form of:
-  operand1 operator operand2
+  Please enter the first value:
+  Please enter an operator:
+  Please enter the second value:
 
 The program will then return the result and prompt for the next problem, like:
   The result is:  X
-  Please enter a problem: 
+  Please enter the first value:
 
 To exit the program, the user can type x or X.
 
 The calculator should support addition, subtraction, multiplication, and division.  It can only accept numbers as operands, but the numbers can be either integers or fractional numbers.
 
 It may be necessary for the senior programmer administering this exercise to adjust the requirements to keep the programmer focused.
+
+Step 2:  String Parsing
+-----------------------
+Modify the calculator program from Step 1 to take a full problem description from the user instead of prompting the user for each portion of the problem.  For instance, the interaction may look like:
+  C:\> calc.exe
+  Please enter a math problem: 
+  1+1
+  The result of "1+1" = 2
+
+This step is intended to put more emphasis on argument parsing in case it needed to be skipped over in the first step and to continue exercising TDD.
+
+Step 3:  Argument Parsing and File Handling
+-------------------------------------------
+Modify the calculator program from Step 1 to take optional command-line arguments that will allow a user to
+pass in a file containing one problem per line and generate a solution for each problem.  The program should take in
+arguments for specifying an input file and an output file.
+
+The arguments should look like:
+  C:\> calc.exe -i input_file_name -o output_file_name
+
+The output file should contain the original problem along with the solution.  Lines in the output file should
+look like:
+  3 + 5 = 8
+  2 * 8 = 16
+  12 / 7 = 1.71429
+
+File handling is a rudimentary programming task, but understanding the IO objects supplied in any given language can be difficult.  Also, most IO implementations are difficult to mock and use with TDD (i.e. Java and .NET).  This exercise allows a programmer to learn how to create an abstraction layer around the IO classes to properly TDD the project code.
+
+Step 4:  Refactoring with TDD, Mocks, and DI
+--------------------------------------------
+Modify the existing calculator program to accept a problem on the command line that looks like:
+  ((((2 + 3) * 6) - 6) / 8)
+
+The program should now be able to accept any number of operands and operators, grouped by parentheses and return
+the correct answer.
+
+If the programmer gets this far, the intention is to get practice refactoring.  This step needs to be dictated and supervised by teh senior programmer to make sure it is tailored to the programmer being trained.

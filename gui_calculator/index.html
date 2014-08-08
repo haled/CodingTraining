@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <table border="1">
+      <tr>
+        <td colspan="4"><input type="text" length="1000000" id="display" value="0"/></td>
+      <tr>
+      <tr>
+        <td align="center"><input type="button" id="btnSeven" value="7" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnEight" value="8" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnNine" value="9" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnDivide" value="/" onclick="operatorClick('divisor');"/></td>
+      </tr>
+      <tr>
+        <td align="center"><input type="button" id="btnFour" value="4" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnFive" value="5" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnSix" value="6" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnMultiply" value="*" onclick="operatorClick('multiplier');"/></td>
+      </tr>
+      <tr>
+        <td align="center"><input type="button" id="btnOne" value="1" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnTwo" value="2" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnThree" value="3" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnMinus" value="-" onclick="operatorClick('subtractor');"/></td>
+      </tr>
+      <tr>
+        <td align="center"><input type="button" id="btnDot" value="." onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnZero" value="0" onclick="numberClick(this);"/></td>
+        <td align="center"><input type="button" id="btnClear" value="C" onclick="clearDisplay();"/></td>
+        <td align="center"><input type="button" id="btnAdd" value="+" onclick="operatorClick2('adder');"/></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center"><input type="button" id="btnEnter" value="Enter" onclick="enterClick();"/></td>
+      </tr>
+    </table>
+  </body>
+
+  <script src="code.js"></script>
+
+</html>
